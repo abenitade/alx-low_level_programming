@@ -4,13 +4,16 @@
  */
 
 #include "main.h"
-void *_memset(void *s, int c, size_t n)
+
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int index;
-	unsigned char *memory = s, value = c;
+	unsigned int i = 0;
 
-	for (index = 0; index < n; index++)
-		memory[index] = value;
+	while (i < n)
+	{
 
-	return (memory);
+		*(s + i) = b;
+		i += 1;
+	}
+	return (s);
 }
