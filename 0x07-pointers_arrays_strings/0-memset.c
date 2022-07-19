@@ -1,19 +1,23 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
- * _memset - fills memory with a constant byte
+ * _memset - function that fills memory with a constant byte.
  *
- * @s: pointer to memory area to fill
- * @n: the number of bytes to fill
+ * @s: mamory area to return
  * @b: constant byte
- *
- * Return: a pointer to the memory area @s
+ * @n: size of bytes
+ * Return: char
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-        unsigned int i;
-        for (i = 0; i < n; i++)
-        {
-                s[i] = b;
-        }
-        return (s);
+	unsigned int i = 0;
+
+	while (i < n)
+	{
+
+		*(s + i) = b;
+		i += 1;
+	}
+	return (s);
 }
