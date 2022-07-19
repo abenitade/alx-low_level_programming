@@ -1,7 +1,18 @@
-/*
- * File: 0-memset.c
- * Auth: Brennan D Baraban
- */
+/**
+ *
+ *  * _memset - function that fills memory with a constant byte.
+ *
+ *   *
+ *
+ *    * @s: mamory area to return
+ *
+ *     * @b: constant byte
+ *
+ *      * @n: size of bytes
+ *
+ *       * Return: char
+ *
+ *        */
 
 #include "main.h"
 
