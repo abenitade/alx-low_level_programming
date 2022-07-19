@@ -1,20 +1,18 @@
+#include "main.h"
+
 /**
  *
- *  * _memset - function that fills memory with a constant byte.
+ *  * _memset - fills memory with a constant byte,
  *
- *   *
+ *   * @s: memory area.
  *
- *    * @s: mamory area to return
+ *    * @b: constant byte.
  *
- *     * @b: constant byte
+ *     * @n: bytes filled.
  *
- *      * @n: size of bytes
+ *      * Return: the pointer to dest.
  *
- *       * Return: char
- *
- *        */
-
-#include "main.h"
+ *       */
 
 void *_memset(void *s, int c, size_t n)
 {
