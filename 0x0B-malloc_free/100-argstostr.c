@@ -1,45 +1,52 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+int _strlen(char *ch);
 
 /**
- * argstostr - concatenates all the arguments of your program
- * @ac: argument count
- * @av: argument vector
- * Return: char
+ * argstostr - concatenate arguments.
+ * @ac: arg counter.
+ * @av: arg vector.
+ * Return: pointer p.
  */
-
 char *argstostr(int ac, char **av)
 {
-	char *ar, *str;
-	int i, j, cont;
+int i, a = 0, k = 0;
+int j;
+char *p;
+if (ac == 0 || av == NULL)
+return (0);
+for (i = 0; i < ac; i++)
+{
+a += _strlen(av[i]);
+}
+p = malloc(a + 1 + ac);
+if (p == NULL)
+return (0);
+for (i = 0; i < ac; i++)
+{
+for (j = 0; j < (_strlen(av[i])); j++)
+{
+p[k] = av[i][j];
+k++;
+}
+p[k] = '\n';
+k++;
+}
+p[k] = '\0';
+return (p);
+}
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
-	for (i = 0; i < ac; i++)
-	{
-		j = 0;
-		while (av[i][j] != '\0')
-		{
-			j++;
-			cont++;
-		}
-		cont++;
-	}
-	cont += 1;
-	ar = malloc(cont * sizeof(char));
-	if (ar == NULL)
-		return (NULL);
-	str = ar;
-	for (i = 0; i < ac; i++)
-	{
-		j = 0;
-		while (av[i][j] != '\0')
-		{
-			*ar = av[i][j];
-			j++;
-			ar++;
-		}
-		*ar = '\n';
-		ar++;
-	}
-	return (str);
+/**
+ * _strlen - counts number of chars.
+ * @ch: string.
+ * Return: pointer i.
+ */
+
+int _strlen(char *ch)
+{
+int i = 0;
+while (ch[i])
+i++;
+return (i);
 }
