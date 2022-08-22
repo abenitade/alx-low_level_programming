@@ -1,6 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_N
-
+#ifndefine MAIN_H
+#define MAIN_H
 #include <elf.h>
 #include <stdlib.h>
 #include <stdio.h>
